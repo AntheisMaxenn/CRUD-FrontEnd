@@ -1,0 +1,13 @@
+<div class="wrapper">
+
+    <app-post-form (postEvent)="receiveMessage($event)"></app-post-form>
+
+    <div class="content-container">
+        <div *ngFor="let post of postList | async">
+
+            <!-- {{post.id}} {{post.postID}} {{post.content}} -->
+
+            <app-post [post]='post'> </app-post>
+        </div>
+    </div>
+</div>

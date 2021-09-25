@@ -1,0 +1,18 @@
+<div class="wrapper">
+    <form [formGroup]="form">
+        <mat-form-field appearance="fill">
+            <textarea formControlName="content" appearance="standrard" matInput placeholder="What's on your mind?" #input maxlength="281"></textarea>
+            <mat-hint>{{input.value?.length || 0}}/281</mat-hint>
+            <div class="btn-container">
+                <button mat-raised-button type="submit" [disabled]="!form.valid" color="primary" (click)="sendPost()">Post</button>
+
+                <button mat-raised-button (click)="public = !public">
+                <mat-icon *ngIf="!public">person</mat-icon>
+                <mat-icon *ngIf="public">groups</mat-icon>
+                {{public ? "Public" : "Private"}}
+            </button>
+
+            </div>
+        </mat-form-field>
+    </form>
+</div>

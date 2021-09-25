@@ -1,0 +1,31 @@
+.wrapper {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 600px;
+    background: white;
+    border-radius: 3px;
+    // padding: 20px;
+}
+
+.top-row {
+    display: inline-flex;
+    border-bottom: solid #767676 1px;
+    width: 100%;
+    padding: 8px 0;
+    align-items: center;
+    .id {
+        flex-grow: 1;
+    }
+    .postID {
+        flex-grow: 4;
+        text-align: left;
+        font-weight: 400;
+    }
+    .public {
+        flex-grow: 1;
+    }
+}
+
+.content {
+    padding: 12px;
+    font-weight: 400;
+}

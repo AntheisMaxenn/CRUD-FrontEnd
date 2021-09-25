@@ -1,0 +1,34 @@
+<div class="wrapper">
+    <div class="toolbar">
+
+        <mat-toolbar>
+            <div class="toolbar-container">
+                <span>| SimpleLogin |</span>
+                <span>Hi, <p>{{thisUser.id | capitalize}}</p> |
+                    <button (click)="logout()" mat-raised-button color="warn">Logout</button>
+                </span>
+            </div>
+        </mat-toolbar>
+    </div>
+
+
+</div>
+
+<div class="content-container">
+
+    <div class="width-container">
+
+
+        <div class="nav-container">
+            <p routerLinkActive="active" [routerLink]="'/home/feed'">Feed</p>
+            <p routerLinkActive="active" [routerLink]="'/home/entries'">My Entries.</p>
+            <p routerLinkActive="active" [routerLink]="'/home/userinfo'">My Info</p>
+        </div>
+
+        <div class="router-container">
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+
+</div>

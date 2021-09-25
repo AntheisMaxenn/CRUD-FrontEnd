@@ -1,0 +1,11 @@
+<div class="wrapper">
+    <div class="top-row">
+        <p class="id">@{{post.id}}</p>
+        <p class="postID">#{{post.postID}}</p>
+        <p class="public">
+            <mat-icon *ngIf="!post.public">person</mat-icon>
+            <mat-icon *ngIf="post.public">groups</mat-icon>
+        </p>
+    </div>
+    <p class="content">{{post.content}}</p>
+</div>

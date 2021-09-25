@@ -1,0 +1,8 @@
+<div class="content-container">
+    <div *ngFor="let post of postList | async">
+
+        <!-- {{post.id}} {{post.postID}} {{post.content}} -->
+
+        <app-post [post]='post'> </app-post>
+    </div>
+</div>

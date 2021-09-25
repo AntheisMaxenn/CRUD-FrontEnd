@@ -1,0 +1,34 @@
+.mat-form-field-infix {
+    box-sizing: border-box;
+    border-top: 0 !important;
+}
+
+.wrapper {
+    margin: 25px;
+}
+
+mat-form-field {
+    width: 500px;
+    align-items: center;
+}
+
+textarea {
+    height: 100px;
+    resize: none !important;
+    // width: 450px;
+    border-top: 0 !important;
+    width: 100%;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    margin-bottom: -5px;
+}
+
+button {
+    width: 120px;
+    display: flex;
+    justify-content: space-evenly;
+}

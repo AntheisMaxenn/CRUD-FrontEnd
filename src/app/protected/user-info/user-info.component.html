@@ -1,0 +1,22 @@
+<div class="wrapper">
+
+    <div class="content" *ngIf="thisUserInfo | async; let user">
+        <!-- <div class="content" *ngIf="thisUserInfo; let user"> -->
+
+        <div class="row">
+            <p>Id:</p>
+            <p> {{user.id}}</p>
+        </div>
+
+        <div class="row">
+            <p>First Name:</p>
+            <p> {{user.firstName}}</p>
+        </div>
+
+        <div class="row">
+            <p>Last Name:</p>
+            <p> {{user.lastName}}</p>
+        </div>
+
+    </div>
+</div>

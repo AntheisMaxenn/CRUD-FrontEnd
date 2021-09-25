@@ -1,0 +1,50 @@
+<div class="wrapper">
+    <form [formGroup]="form" (keyup.enter)='login()'>
+
+        <div class="login-card">
+            <h2>Login</h2>
+
+            <mat-form-field appearance="fill" floatLabel="always">
+                <mat-label>username: </mat-label>
+                <input formControlName="username" matInput>
+            </mat-form-field>
+
+
+            <mat-form-field appearance="fill" floatLabel="always">
+                <mat-label>password: </mat-label>
+                <input formControlName="password" matInput [type]='hide?"password":"text"'>
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+
+
+
+            <div class="container">
+                <!-- <button mat-raised-button color="primary" (click)="printValues()">Login</button> -->
+                <button mat-raised-button color="primary" (click)="login()">
+                    <div class="spin-container">
+                    Login 
+                        <mat-spinner *ngIf="loading" color="warn" [diameter]="25"></mat-spinner>
+                    </div>
+                </button>
+                <!-- <mat-spinner mode="indeterminate"></mat-spinner> -->
+
+            </div>
+
+            <div class="error-container" *ngIf="loginFailedRes">
+                <!-- {{(response | json).replace('"','').replace('"','')}} -->
+                {{(response | json | unquote)}}
+            </div>
+
+            <ul>
+                <li>username: Elon</li>
+                <li>password: P@ssw0rd</li>
+                <br/>
+                <li>username: Jeff</li>
+                <li>password: P@ssw0rd</li>
+                <br/>
+            </ul>
+        </div>
+    </form>
+</div>
